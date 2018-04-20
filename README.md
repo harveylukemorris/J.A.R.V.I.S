@@ -1,3 +1,3 @@
-# J.A.R.V.I.S
+# PROJECT-J.A.R.V.I.S
 
-Artificially Intelligent Personal Assistant Project in Python for Android
+Project to build an artificially intelligent personal assistant in python for both Android and Mac
