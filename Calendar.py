@@ -140,8 +140,8 @@ def addEvent(profile, mic):
 
 	while True:
 		try:
-			mic.say("What would you like to add?")
-			eventData = mic.activeListen()
+			print("What would you like to add sir?")
+			eventData = input("")
 			createdEvent = service.events().quickAdd(calendarId='primary', text=eventData).execute()
 			eventRawStartTime = createdEvent['start']
 			
@@ -164,7 +164,7 @@ def addEvent(profile, mic):
 		
 			dictKeys = [ key for key, val in monthDict.items() if val==eventDateMonth ]
 			eventDateMonth = dictKeys[0]
-			mic.say("Added event " + createdEvent['summary'] + " on " + str(eventDateMonth) + " " + str(eventDateDay) + " at " + str(eventTimeHour) + ":" + str(eventTimeMinute) + " " + appendingTime)
+			mic.say("Added event sir,  " + createdEvent['summary'] + " on " + str(eventDateMonth) + " " + str(eventDateDay) + " at " + str(eventTimeHour) + ":" + str(eventTimeMinute) + " " + appendingTime)
 			mic.say("Is this what you wanted?")
 			userResponse = mic.activeListen()
 			
